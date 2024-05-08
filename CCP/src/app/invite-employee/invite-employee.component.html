@@ -1,0 +1,97 @@
+<app-navbar></app-navbar>
+
+<!-- Insert Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Invite Employee</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="inviteForm"><table style="margin-left: 20%;">
+          <div class="form-group">
+            
+              <tr><td><label for="email" class="col-form-label-lg">Email ID</label></td>
+                <td>  <input type="email" id="email" class="form-control form-control-lg" formControlName="email" placeholder="Please enter Inviting person email ID">
+                  <br><div *ngIf="inviteForm.get('email')!.touched && inviteForm.get('email')!.invalid">
+                    <div *ngIf="inviteForm.get('email')!.hasError('required')">
+                      <b><font color="red">*Email required</font></b>
+                    </div>
+                    <div *ngIf="inviteForm.get('email')!.hasError('pattern')">
+                      <b><font color="red">*Invalid email format</font></b>
+                    </div>
+                  </div></td></tr>
+              <tr><td></td><td>
+                <button type="submit" class="btn btn-block btn-lg btn-primary" [disabled]="inviteForm.invalid" id="submit"
+                (click)="sendInvite(inviteForm.value)">Send Invite</button>
+                
+              </td></tr></div></table></form>
+                <br><div *ngIf="message1.valueOf()">
+                  <p class="alert alert-danger" id="alert">
+                    <strong>OOPS!</strong> {{message1}}
+                  </p>
+                </div>
+                <div *ngIf="message2.valueOf()">
+                  <p class="alert alert-warning" id="alert">
+                    <strong>Warning!</strong> {{message2}}
+                  <p>
+                </div>
+                <div *ngIf="message3.valueOf()">
+                  <p class="alert alert-success" id="alert">
+                    <strong>Success!</strong> {{message3}}
+                  </p>
+                </div></div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-block btn-lg btn-primary" [disabled]="inviteForm.invalid" id="reset"
+                  (click)="reset(inviteForm.value)">Reset</button>
+          
+                </div></div></div></div>
+        
+
+
+<div class="container">
+
+  <table class="table table-hover" style="margin-top: 3%;">
+
+    <tr scope="row">
+      <td colspan="7" id="tableTitle">
+        Invite Employee
+      </td>
+
+    </tr>
+
+    <tr scope="row">
+      <td colspan="7" id="tableAction" style="border-bottom: 1px solid #dee2e6;">
+        <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          id="addRegionButton" style="margin-top: 2%;margin-bottom: 2%;">Send Invite</button>
+      </td>
+    </tr>
+    <tr scope="row" id="tableHeader" style="border-bottom: 1px solid #dee2e6;">
+      <td scope="col">Invitation Id</td>
+      <td scope="col">Sender Email</td>
+      <td scope="col">Receiver Email</td>
+      <td scope="col">Invitation Code</td>
+      <td scope="col">Send Time</td>
+      <td scope="col">Status</td>
+      <td scope="col">Accepted Time</td>
+    </tr>
+
+
+    <tbody>
+      <tr *ngFor="let obj of inviteList" scope="row" id="tableData">
+        <td scope="col">{{obj.invitationId}}</td>
+        <td scope="col">{{obj.sender}}</td>
+        <td scope="col">{{obj.recipientEmail}}</td>
+        <td scope="col">{{obj.invitationCode}}</td>
+        <td scope="col">{{obj.sentTime}}</td>
+        <td scope="col">{{obj.accepted}}</td>
+        <td scope="col">{{obj.acceptedTime}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+  <!-- <p>{{result}}</p> -->
+
+
+</div>

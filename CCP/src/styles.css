@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot');
+    src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
+         url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
+         url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot');
+    src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.woff') format('woff'),
+         url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.ttf') format('truetype'),
+         url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+*{
+     font-family: 'proxima_nova_rgregular';
+
+}
+  #submit{
+     font-family: 'proxima_nova_rgregular';
+
+     background-color: #1B193F;
+     border-color: #1B193F;
+     font-weight: 550;
+  
+ }
+ #submit:focus{
+     /* background-color: #27235c; */
+     border: 1px  solid white;
+     font-family: 'proxima_nova_rgregular';
+
+     outline-style: solid;
+     outline-color: transparent;
+     box-shadow: 0 0 0 2px #27235c;
+  
+    
+ }
+ #submit:disabled{
+     font-family: 'proxima_nova_rgregular';
+
+     border: none;
+     background-color: #B3B3B3;
+     color: #666666;
+ }
+ #submit:hover{
+     font-family: 'proxima_nova_rgregular';
+
+     background-color: #27235c;
+ }
+ #resend:hover{
+     font-family: 'proxima_nova_rgregular';
+
+     background-color: #EEEEEE;
+ }
+ #resend:disabled{
+     font-family: 'proxima_nova_rgregular';
+
+     color: #eeeeee;
+     background-color: #FFFFFF;
+     color: #666666;
+     border: 2px solid #cccccc;
+ border-color: #cccccc;
+ }
+ #resend:focus{
+     /* background-color: #27235c; */
+     /* border: 2px  solid #27235c; */
+     font-family: 'proxima_nova_rgregular';
+
+     outline-style: solid;
+     outline-color: transparent;
+     box-shadow: 0 0 0 1.5px #27235c;
+     background-color: #ffffff;
+  
+    
+ }
+ #resend{
+     font-family: 'proxima_nova_rgregular';
+
+     border-color: #27235c;
+     color: #27235c;
+     background:none
+ }
+  
+ 

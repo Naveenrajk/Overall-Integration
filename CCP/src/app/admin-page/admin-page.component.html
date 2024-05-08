@@ -1,0 +1,84 @@
+<!-- <app-navbar></app-navbar>
+
+
+
+<main style="margin-left: 20%;">
+
+    <router-outlet></router-outlet>
+
+</main>
+
+<div class="container-fluid" id="home">
+    <div class="row" style="padding-left: 5%;">
+        <div class="col-sm-4">
+
+
+        </div>
+        <div class="container ml-4">
+
+
+            <div class="wrapper">
+                <div class="card">
+                    <img class="card-img-top" src="/assets/post1.png" alt="Card image cap">
+                    <button class="card-btn" routerLink="/post"> POST</button>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="/assets/poll1.png" alt="Card image cap">
+                    <button class="card-btn" routerLink="/create">POLL</button>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="/assets/survey1.png" alt="Card image cap" style="color: white;">
+                    <button class="card-btn" routerLink="/survey">SURVEY</button>
+                </div>
+            </div>
+        </div> -->
+
+<app-navbar></app-navbar> 
+<main style="margin-left: 20%;"> 
+    <router-outlet></router-outlet> 
+</main>
+ 
+<div class="container-fluid" id="home">
+    <div class="row" style="padding-left: 5%;">       
+        <div class="container ml-4"> 
+            <div class="wrapper"> 
+                     <div class="col-lg-3 col-md-4col-sm-6 col-xs-12" style="margin-left: 30px;">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="/assets/post.png" alt="">
+                            <div class="overlay">
+                               <h2>CREATE POST</h2>
+                               <p>Share stories or anecdotes or give your audience a sneak peek of upcoming projects or developments</p>
+                                <button class="card-btn" routerLink="/post"> POST</button>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin-left: 30px;">
+                    <div class="hovereffect">
+                        <img class="img-responsive"
+                            src="/assets/poll.jpg"
+                            alt="">
+                        <div class="overlay">
+                            <h2>Create Poll</h2>
+                            <p>Polls are quick and easy market research surveys that gauge feedback and opinions,It help to measure market sentiment in real-time.
+                            </p>
+                            <button class="card-btn" routerLink="/create">POLL</button>
+                        </div>
+                    </div>
+                </div>
+ 
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin-left: 30px;">
+                    <div class="hovereffect">
+                        <img class="img-responsive"
+                            src="/assets/survey.jpg"
+                            alt="">
+                        <div class="overlay">
+                            <h2>Create Survey</h2>
+                            <p>A document whose purpose is to convey the information acquired during the survey in its whole and objectively.</p>
+                            <button class="card-btn" routerLink="/survey">SURVEY</button>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,332 @@
+<!-- builder.component.html -->
+<!-- <div class="myDiv"> -->
+
+<div class="sidecontainer">
+  <!-- <app-survey-dashboard></app-survey-dashboard> -->
+  <app-navbar></app-navbar>
+</div>
+<main>
+
+
+  <div>
+    <form [formGroup]="myGroup" id="myForm">
+      <div class="sticky-top" id="stickynav">
+        <nav class="navbar navbar-light bg-light">
+          <div class="container-fluid ">
+            <a class="navbar-brand">Survey Builder</a>
+            <form class="d-flex">
+              <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+              <button class="add-page-button btn me-2" (click)="addPage()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg> Add Page
+              </button>
+
+              <button class="btn" (click)="publish()" id="publishbtn">
+                Publish
+              </button>
+            </form>
+          </div>
+        </nav>
+      </div>
+
+      <div class="left-container">
+        <div class="left-div">
+
+          <div class="add-page-container">
+
+            <!-- <button (click)="publish()" style="position: fixed; top: 3%; left: 7%;">
+            Publish
+          </button> -->
+          </div>
+
+          <div class="card" id="field-card">
+            <div class="card-header " id="card-head">
+              Drag Here to Add Questions !
+            </div>
+            <div class="card-body" id="fixed-field">
+              <div class="field" draggable="true" (dragstart)="onDragStart($event, 'Radio')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-record-circle-fill" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                </svg>
+                Radio
+              </div>
+              <div class="field" draggable="true" (dragstart)="onDragStart($event, 'Checkbox')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-check2-square" viewBox="0 0 16 16">
+                  <path
+                    d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z" />
+                  <path
+                    d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0" />
+                </svg> CheckBox
+              </div>
+              <!-- <div class="field" draggable="true" (dragstart)="onDragStart($event, 'Dropdown')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.75732 8.46448L9.17154 7.05026L12 9.87869L14.8284 7.05029L16.2426 8.46451L12 12.7071L7.75732 8.46448Z"
+                  fill="currentColor" />
+                <path
+                  d="M9.17154 11.2929L7.75732 12.7071L11.9999 16.9498L16.2426 12.7071L14.8284 11.2929L12 14.1213L9.17154 11.2929Z"
+                  fill="currentColor" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z"
+                  fill="currentColor" />
+              </svg> Dropdown
+            </div> -->
+            </div>
+
+            <!-- <div class="field" draggable="true" (dragstart)="onDragStart($event, 'dropdown-many')">
+                        Dropdown (Many Answers)
+                    </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="container">
+        <span class="d-flex ">Survey Builder</span>
+        <button class="add-page-button" (click)="addPage()" (click)="savePage()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+          </svg> Add Page
+        </button>
+      </div> -->
+
+
+
+      <div class="right-container">
+
+        <div class="right-div">
+          <!--  -->
+          <div *ngFor="let page of surveyPages.slice(0,3); let i = index;" class="page-card" id="page-card">
+            <div class="card" id="card-page">
+              <!-- [formGroupName]="i" -->
+              <div class="card-header" id="page-header">
+                Page no : {{ i + 1 }}
+                <div>
+                  <input *ngIf="i==0" type="text" class="form-control" placeholder="untitled"
+                    formControlName="pageTitle" id="pg-title">
+                  <input *ngIf="i==1" type="text" class="form-control" placeholder="untitled"
+                    formControlName="pageTitle2" id="pg-title">
+                  <input *ngIf="i==2" type="text" class="form-control" placeholder="untitled"
+                    formControlName="pageTitle3" id="pg-title">
+                </div>
+
+                <button *ngIf="i==0" class="btn" style="color: #27235C;" disabled>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+                      fill="currentColor" />
+                  </svg>
+                </button>
+
+                <button *ngIf="i>0" class="btn btn-outline-warn" (click)="removePage(i)">
+                  <svg id="rmvsvg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+                      fill="currentColor" />
+                  </svg>
+                </button>
+              </div>
+              <!-- <div class="card-body" *ngFor="let ref of questionList">
+              <input value="{{ref.questions}}">
+            </div> -->
+              <div class="card-body" droppable="true" (drop)="onDrop($event, i , 'checkbox',myGroup.value)"
+                (dragover)="onDragOver($event, i)" (dragenter)="onDragEnter(i)" (dragleave)="onDragLeave(i)"
+                [ngClass]="{'drag-over': dragOverPage === i}">
+                <!-- <div *ngFor="let ref of referenceList">
+                    {{ref.questions}}
+                  </div> -->
+                <div class="" *ngFor="let refer of newReferenceList">
+                  <div *ngIf="i+1==refer.pageNo">
+                    <div class="question-field" *ngIf="refer.optionType=='Radio'">
+                      {{refer.questionNo}}. {{refer.questions}}
+                      <!-- <input value="{{refer.questions}}"><br> -->
+
+                      <div *ngFor="let opt of optionValueList">
+                        <div *ngIf="refer.questionNo==opt.questionNo && refer.pageNo==opt.pageNo">
+                          <div class="answer-field">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z"
+                                fill="lightgrey" />
+                            </svg> {{opt.options}}
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <input value="{{refer.options}}"> -->
+                      <!-- <div *ngFor="let ques of quest">
+                                   <input type="radio">{{ques}}</div> -->
+                    </div>
+                    <div class="question-field" *ngIf="refer.optionType=='Checkbox'">
+                      {{refer.questionNo}}. {{refer.questions}}
+                      <!-- <input value="{{refer.questions}}"><br> -->
+
+                      <div *ngFor="let opt of optionValueList">
+                        <div *ngIf="refer.questionNo==opt.questionNo && refer.pageNo==opt.pageNo">
+                          <div class="answer-field">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M17 7H7V17H17V7ZM4 4V20H20V4H4Z"
+                                fill="lightgrey" />
+                            </svg> {{opt.options}}
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <input value="{{refer.options}}"> -->
+                    </div>
+                    <div class="question-field" *ngIf="refer.optionType=='Dropdown'">
+                      {{refer.questionNo}}. {{refer.questions}}
+                      <!-- <input value="{{refer.questions}}"><br> -->
+
+                      <div *ngFor="let opt of optionValueList">
+                        <div *ngIf="refer.questionNo==opt.questionNo && refer.pageNo==opt.pageNo">
+                          <div class="answer-field">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M17 7H7V17H17V7ZM4 4V20H20V4H4Z"
+                                fill="lightgrey" />
+                            </svg> {{opt.options}}
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <input value="{{refer.options}}"> -->
+                    </div>
+                    <!-- <input value="{{refer.questions}}"><br>
+                                <input value="{{refer.optionType}}">
+                                    <input value="{{refer.options}}"> -->
+
+                  </div>
+                </div>
+                <div *ngIf="showPlaceholder[i]" class="placeholder-text">
+                  Drop the Field to Add Question !
+                </div>
+                <div *ngIf="viewPlaceholder[i]" class="placeholder-text">
+                  Maximum question limit is reached for this page !
+                </div>
+                <div *ngFor="let question of page.questions.slice(0,15); let j = index" class="question"
+                  (dragstart)="onQuestionDragStart($event, question)">
+                  <div class="field-type">
+                    {{ question.type }}
+                  </div>
+                  <!-- <button class="btn btn-primary" id="field-button" type="button" data-bs-toggle="offcanvas"
+                      data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"> -->
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                          class="bi bi-plus-square" viewBox="0 0 16 16">
+                                          <path
+                                              d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                          <path
+                                              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                      </svg> Add Question -->
+                  <!-- Add Question
+                    </button> -->
+
+                  <div class="offcanvas-overlay" *ngIf="questionno<16" draggable="false">
+                    <div class="offcanvas offcanvas-end show" data-bs-backdrop="static" tabindex="-1"
+                      id="staticBackdrop">
+                      <div class="offcanvas-header" style="background-color: rgb(144, 141, 141); color: black;">
+                        Add Questions Here
+                        <button type="btn btn-secondary" class="btn-close  text-reset" data-bs-dismiss="offcanvas"
+                          aria-label="Close" (click)="toggleOffcanvas()"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                        <div class="mb-3">
+                          <label for="question" class="form-label">Question {{questionno}}</label>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                              (click)="toggleDisplayShare()"><label>Mandatory</label>
+                          </div>
+                          <textarea class="form-control" id="question" rows="3" formControlName="questions"
+                            style="background-color: transparent; border: 1px solid black; color: black; align-content: center;"
+                            placeholder="Type a question here"></textarea>
+                        </div>
+                        <!-- [(ngModel)]="questionText" -->
+                        <div class="mb-3" formArrayName="optionArray">
+                          <label for="answer" class="form-label">{{optionType}}</label>
+                          <br>
+                          <div [formGroupName]="i"
+                            *ngFor="let option of optionArray.controls.slice(0,10); let i = index">
+
+                            <!-- <input type="text" class="form-control" [formControlName]="i" placeholder="Option {{ i+1 }}"
+                              style="color: black;background-color: transparent; border: 1px solid black;"> -->
+                            <input type="text" class="form-control" formControlName="options"
+                              placeholder="Option {{ i+1 }}"
+                              style="color: black;background-color: transparent; border: 1px solid black; width: 90%; display: inline;">
+
+
+                            <svg *ngIf="i>1" (click)="removeOption(i)" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" xmlns="http://www.w3.org/2000/svg"
+                              style="display: inline-flex; margin-left: 3%;">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17 5V4C17 2.89543 16.1046 2 15 2H9C7.89543 2 7 2.89543 7 4V5H4C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H5V18C5 19.6569 6.34315 21 8 21H16C17.6569 21 19 19.6569 19 18V7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H17ZM15 4H9V5H15V4ZM17 7H7V18C7 18.5523 7.44772 19 8 19H16C16.5523 19 17 18.5523 17 18V7Z"
+                                fill="red" />
+                              <path d="M9 9H11V17H9V9Z" fill="red" />
+                              <path d="M13 9H15V17H13V9Z" fill="red" />
+                            </svg>
+
+                          </div>
+                          <button class="btn" id="btnopt" (click)="addOption()">Add Option</button>
+                          &nbsp;&nbsp;&nbsp;
+
+                        </div>
+                        <button type="button" class="btn" id="btnsave" (click)="insertPage(myGroup.value)">Save</button>
+                        <!-- (click)="hidden(i + 1, j)" -->
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1"
+                                      id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                                      <div class="offcanvas-header">
+                                          <h5 class="offcanvas-title" id="staticBackdropLabel">Survey Question Editor</h5>
+                                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                              aria-label="Close"></button>
+                                      </div>
+                                      <div class="offcanvas-body">
+                                          <div class="mb-3">
+                                              <label for="question" class="form-label">Question</label>
+                                              <textarea class="form-control" id="question" rows="3"
+                                                  formControlName="questions" [(ngModel)]="questionText"></textarea>
+                                          </div>
+                                          <div class="mb-3">
+                                              <label for="answer" class="form-label">Answer</label>
+                                              <div *ngFor="let option of options.slice(1,11); let i = index">
+                                                 
+                                                  <input type="text" class="form-control" formControlName="options"
+                                                      placeholder="Option {{ i + 1 }}">
+                                                  <button class="btn btn-danger" (click)="removeOption(i)">Remove</button>
+                                              </div>
+                                              <button class="btn btn-primary" (click)="addOption()">Add Option</button>
+                                          </div>
+                                          <button type="button" class="btn btn-primary"
+                                              (click)="insertPage(myForm.value)">Save</button>
+                                      </div>
+                                  </div> -->
+                  <!-- <button class="btn btn-danger" id="field-button" (click)="removeField(i + 1, j)">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+                          fill="currentColor" />
+                      </svg></button> -->
+                </div>
+                <!-- Display saved questions -->
+
+              </div>
+            </div>
+            <!-- <div *ngFor="let question of page.questions" class="saved-question">
+              <div class="question-field">{{ question.text }}</div>
+              <div class="answer-field">{{ question.answer }}</div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</main>
+<!-- </div> -->

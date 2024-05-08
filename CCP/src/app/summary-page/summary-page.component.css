@@ -1,0 +1,394 @@
+ 
+.flex-container #leftDiv {
+    flex: 0 0 auto;
+    width: 30%;
+}
+ 
+/* #leftDiv {
+    position: fixed;
+    height: 70%;
+    overflow-y: auto;
+    margin-left: 5%;
+    padding: 15px;
+    border: none;
+    border-radius: 0%;
+    box-shadow: 1px 1px 1px 1px rgb(244, 244, 244);
+} */
+ 
+@media (max-width: 991.98px) {
+    /* #leftDiv {
+        margin-left: 8%;
+    } */
+}
+ 
+#rightDiv {
+    padding: auto;
+    margin: auto;
+    margin-top: 1%;
+    position: static;
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    /* padding: 15px; */
+    border: none;
+    /* border-radius: 0%; */
+    /* box-shadow: 1px 1px 1px 1px rgb(244, 244, 244);
+    background-color: #EEEEEE; */
+}
+ 
+@media (max-width: 991.98px) {
+    #rightDiv {
+        margin-left: 20%;
+    }
+}
+ 
+@media (min-width: 425px) {
+    #rightDiv {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+ 
+/* Header css */
+ 
+/* .bg {
+    background-color: rgb(243, 243, 243);
+} */
+ 
+.position-sticky {
+    position: sticky;
+    top: 0;
+}
+ 
+/* header .card {
+    width: 99.4%;
+    margin-left: 0.3%;
+    border: 1px solid #ddd;
+} */
+ 
+/* header .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+ 
+/* h5 {
+    font-size: 22px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    text-decoration: none solid rgb(17, 17, 17);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    white-space: nowrap;
+    word-spacing: 0px;
+} */
+ 
+/* h4 {
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    text-decoration: none solid rgb(17, 17, 17);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    white-space: nowrap;
+    word-spacing: 0px;
+} */
+ 
+ 
+@media (max-width: 991.98px) {
+    main {
+        padding-left: 7%;
+    }
+}
+ 
+.sidebar {
+    position: fixed;
+    background-color: #27235C;
+    height: 100%;
+    /* left: 0.3%; */
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 65px;
+    z-index: 600;
+    /* border-radius: 5px; */
+    font-size: x-small;
+ 
+}
+ 
+.list-group-item {
+ 
+    border: none;
+    color: rgb(251, 247, 247);
+    background-color: transparent;
+    /* background-color: #27235C; */
+    padding: 30px 10px 11px 6px;
+    text-align: center;
+    border-radius: 0%;
+}
+ 
+.list-group :hover {
+    background-color: #97247E;
+}
+ 
+.list-group:focus {
+    background-color: #97247E;
+}
+ 
+ 
+ 
+ 
+/* footer{
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    height: 30px;
+    background-color: white;
+    z-index: 100;
+} */
+ 
+/* #topitem {
+    background-color: rgb(97, 98, 99);  
+} */
+ 
+.nav-item {
+    color: black;
+}
+ 
+.nav-item:hover {
+    background-color: white;
+}
+ 
+#myid {
+    margin: auto;
+    width: 30%;
+    /* text-align: center; */
+}
+ 
+/* counting css */
+ 
+.card-counter {
+    /* box-shadow: 2px 2px 10px #DADADA; */
+    /* margin: 15%; */
+    /* padding: 20px 10px; */
+    /* background-color: #fff; */
+    /* height: 100%;
+    width: 100%;
+    align-items: center;
+    text-align: center; */
+    /* border-radius: 50px 50px 50px 50px; */
+    /* transition: .3s linear all; */
+}
+ 
+.card-counter {
+    /* height: 100%;
+    width: 100%; */
+    align-items: center;
+    text-align: center;
+    padding: 5%;
+    margin: auto;
+    width: 21.5%;
+    height: 30%;
+    cursor: pointer;
+    /* border: 5px solid #27235C; */
+    /* color: #FFFFFF; */
+    font-weight: bold;
+    border-radius: 100px;
+}
+ 
+.card-counter-1 {
+   
+    align-items: center;
+    text-align: center;
+    padding: 5.6%;
+    margin: auto;
+    width: 22%;
+    height: 50%;
+    cursor: pointer;
+    /* color: #FFFFFF; */
+    font-weight: bold;
+    border-radius: 100px;
+    /* border: 5px solid #27235C; */
+}
+ 
+table {
+    width: 100%;
+}
+ 
+td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+#quesdiv {
+    margin-top: 0%;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+}
+ 
+#quescard {
+    border-radius: 10px;
+    position: static;
+}
+ 
+#queshead {
+    background-color: #27235C;
+    color: #EEEEEE;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: large;
+ 
+}
+ 
+#nav {
+    background-color: #27235C;
+}
+ 
+#sum,
+#build {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+ 
+.btn:hover {
+    background-color: #97247E;
+}
+ 
+#editfield {
+    margin: auto;
+    /* border: none; */
+    width: 100%;
+    text-align: start;
+    background-color: transparent;
+    border-color: transparent;
+    /* display: inline; */
+    /* font-weight: bold; */
+    appearance: none;
+    border-radius: 0%;
+    box-shadow: none;
+    position: static;
+}
+ 
+#editfield:focus {
+    border-bottom-color: #cdcaca;
+    outline: none;
+    /* border-style: none; */
+}
+ 
+.pgtitle {
+    border: none;
+    /* background-color:antiquewhite; */
+    font-weight: bold;
+    margin: 0%;
+    position: static;
+}
+ 
+#pgfield {
+    width: fit-content;
+    margin-right: 30%;
+    margin-left: 30%;
+    text-align: center;
+    /* align-self: center; */
+    border-color: transparent;
+    background-color: transparent;
+    /* display: inline; */
+    font-weight: bold;
+    appearance: none;
+    border-radius: 0%;
+    box-shadow: none;
+    position: static;
+}
+ 
+#pgfield:focus {
+    outline: none;
+    border-bottom-color: #cdcaca;
+    /* border-style: none; */
+}
+ 
+ 
+ 
+#pgcontent {
+    margin: auto;
+    padding: 1%;
+    position: static;
+}
+ 
+#submitbtn {
+    float: right;
+    font-size: small;
+    border-color: #27235C;
+}
+ 
+#submitbtn:hover {
+    background-color: #27235C;
+    color: #FFFFFF;
+}
+ 
+/* #cardcont {
+    position: static;
+    margin: auto;
+} */
+ 
+.quescontent {
+    display: inline-flex;
+    width: 100%;
+    padding: 1%;
+}
+ 
+.optcontent {
+    display: inline-flex;
+    /* width: 50%; */
+    padding: 1%;
+}
+#pageCount,#questionCount{
+    width: 25%;
+    text-align: right;
+   
+}
+ 
+#pageCount{
+ 
+   margin-left: 50%;
+   /* margin-right: 30%; */
+   position: static;
+   border: 2px solid  #27235C;
+   background-color: white;
+   color: #27235C;
+}
+ 
+#questionCount{
+   margin: 3%;
+   margin-right: 0%;
+   position: static;
+   /* margin-left: 2%; */
+    border: 2px solid  #27235C;
+    background-color: white;
+    color: #27235C;
+}
+ 
+ 
+#icon1{
+    color: #27235C;
+}
+ 
+ 
+#icon2{
+    color: #27235C;
+}
+ 
+ 
+ 
+i{
+    float: left;
+    color: #27235C;
+    margin-right : 1rem;
+    margin-top : 1rem;
+    font-size: 2.5rem
+}

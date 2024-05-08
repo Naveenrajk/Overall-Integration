@@ -1,0 +1,31 @@
+*{
+    font-family: 'proxima_nova_rgregular';
+}
+.form-group {
+    margin-bottom: 20px;
+}
+ 
+ #left{
+    padding-top: 15%;
+     padding-left: 5%;    
+}
+.form-2-wrapper {
+  padding-top: 50%;
+    padding: 100px;
+    border-radius: 8px;
+}
+#left {
+    padding-top: 13%;
+    padding-left: 5%;
+  }
+  h1 {
+    margin-left: 10%;
+  }
+.btn-primary {
+    width: 100%;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;  
+}
+ 
